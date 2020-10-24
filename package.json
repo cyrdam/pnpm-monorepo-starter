@@ -1,0 +1,15 @@
+{
+  "name": "pnpm-monorepo-starter",
+  "version": "1.0.0",
+  "description": "pnpm starter template for monorepo projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monorepo",
+    "pnpm"
+  ],
+  "author": "Damian Cyrus <damian.cyrus@diconium.com>",
+  "license": "MIT"
+}
