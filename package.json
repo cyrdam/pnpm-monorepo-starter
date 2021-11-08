@@ -4,6 +4,7 @@
   "description": "pnpm starter template for monorepo projects",
   "main": "index.js",
   "scripts": {
+    "dev": "pnpm run --recursive serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,5 +12,9 @@
     "pnpm"
   ],
   "author": "Damian Cyrus <damian.cyrus@diconium.com>",
-  "license": "MIT"
+  "license": "ISC",
+  "engines": {
+    "pnpm": ">=6",
+    "node": ">=14"
+  }
 }
