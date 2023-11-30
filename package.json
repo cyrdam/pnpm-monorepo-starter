@@ -13,7 +13,7 @@
     "monorepo",
     "pnpm"
   ],
-  "author": "Damian Cyrus <damian.cyrus@diconium.com>",
+  "author": "Damian Cyrus <hi@damiancyrus.com>",
   "license": "ISC",
   "engines": {
     "pnpm": ">=6",
