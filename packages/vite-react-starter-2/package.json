@@ -7,7 +7,8 @@
     "dev": "vite --port=3011",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo \"Note: missing tests in package\" && exit 0"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -15,15 +16,15 @@
   },
   "devDependencies": {
     "@shared/eslint-config": "workspace:*",
-    "@types/react": "^18.2.38",
-    "@types/react-dom": "^18.2.17",
-    "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "@typescript-eslint/parser": "^6.12.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^8.54.0",
+    "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4",
-    "typescript": "^5.3.2",
-    "vite": "^5.0.2"
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
   }
 }
