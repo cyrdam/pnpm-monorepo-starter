@@ -11,7 +11,7 @@
     "test": "echo \"Note: no test here\" && exit 0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^6.19.1",
     "eslint": "^8.56.0"
   },
