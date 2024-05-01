@@ -12,12 +12,12 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@shared/eslint-config": "workspace:*",
     "@types/react": "^18.2.72",
-    "@types/react-dom": "^18.2.22",
+    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
