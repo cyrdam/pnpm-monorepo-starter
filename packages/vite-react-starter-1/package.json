@@ -11,12 +11,12 @@
     "test": "echo \"Note: missing tests in package\" && exit 0"
   },
   "dependencies": {
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@shared/eslint-config": "workspace:*",
-    "@types/react": "^18.2.72",
+    "@types/react": "^18.3.1",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
