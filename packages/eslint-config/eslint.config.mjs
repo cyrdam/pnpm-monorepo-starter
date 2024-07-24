@@ -7,9 +7,9 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
 	pluginJs.configs.recommended,
 	...tseslint.configs.recommended,
-  // ...tseslint.configs.recommendedTypeChecked,
-  // ...tseslint.configs.stylisticTypeChecked,
-  // ...tseslint.configs.strictTypeChecked,
+	// ...tseslint.configs.recommendedTypeChecked,
+	// ...tseslint.configs.stylisticTypeChecked,
+	// ...tseslint.configs.strictTypeChecked,
 	{
 		linterOptions: {
 			reportUnusedDisableDirectives: 'error',
