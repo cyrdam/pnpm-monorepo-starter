@@ -1,24 +1,23 @@
 {
   "name": "@shared/eslint-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shareable ESLint configuration",
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "private": true,
-  "main": "eslint.config.js",
+  "main": "eslint.config.mjs",
   "scripts": {
     "test": "echo \"Note: no test here\" && exit 0"
   },
   "dependencies": {
-    "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.7.0",
-    "typescript-eslint": "^7.17.0",
+    "typescript-eslint": "^8.0.0-alpha.52",
     "eslint": "^9.7.0",
     "globals": "^15.8.0"
   },
   "peerDependencies": {
-    "typescript-eslint": "^7.17.0",
     "eslint": ">= 9"
   }
 }

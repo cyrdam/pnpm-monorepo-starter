@@ -1,32 +1,19 @@
-import { fixupConfigRules } from "@eslint/compat";
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
+import defaultEslintConfiguration from '@shared/eslint-config';
+import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from "eslint-plugin-react-refresh";
-import globals from "globals";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import tseslint from "typescript-eslint";
 
-const __filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-	baseDirectory: dirname,
-	recommendedConfig: js.configs.recommended,
-	allConfig: js.configs.all
-});
-
-export default [
+// use types for eslint config object, but not for tseslint!
+/* * @type {(import eslint from 'eslint').Linter.Config} */
+export default tseslint.config(
+	...defaultEslintConfiguration,
 	{
 		ignores: ["**/dist", "**/eslint.config.js"],
 	},
-	...fixupConfigRules(compat.extends("@shared/eslint-config", "plugin:react-hooks/recommended")), {
+	{
 		plugins: {
 			"react-refresh": reactRefresh,
-		},
-
-		languageOptions: {
-			globals: {
-				...globals.browser,
-			},
+			"react-hooks": reactHooks.configs.recommended,
 		},
 
 		rules: {
@@ -34,5 +21,5 @@ export default [
 				allowConstantExport: true,
 			}],
 		},
-	}
-];
+	},
+);
