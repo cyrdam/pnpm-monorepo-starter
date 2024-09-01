@@ -12,7 +12,7 @@
     "test": "echo \"Note: no test here\" && exit 0"
   },
   "dependencies": {
-    "@eslint/js": "^9.9.0",
+    "@eslint/js": "^9.9.1",
     "eslint": "^9.9.0",
     "globals": "^15.9.0",
     "typescript-eslint": "^8.1.0"
