@@ -1,0 +1,86 @@
+{
+  "name": "pnpm-monorepo-starter",
+  // "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-22",
+  // "image": "mcr.microsoft.com/devcontainers/base:alpine-3.20",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Runs docker from the project root instead of `.devcontainer`,
+    // to ensure `COPY pnpm-lock.yaml ./` works
+    "context": ".."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  // "dockerComposeFile": "docker-compose.yml",
+  // "service": "dc_com_devcontainer",
+  // "workspaceFolder": "/workspaces/{localWorkspaceFolderBasename}",
+  "mounts": [
+    // if OS is unix
+    "type=bind,source=${localEnv:HOME}/.ssh,target=/tmp/.ssh,readonly",
+    // else if OS is Windows
+    "type=bind,source=${localEnv:USERPROFILE}\\.ssh,target=/tmp/.ssh,readonly"
+  ],
+	"onCreateCommand": "",
+  "postCreateCommand": {
+    // be carefull: ssh is only available then in devcontainer, no changes on host OS
+    "set ssh configuration": "mkdir -p ~/.ssh", // && ls -la ~/.ssh && cp -r /tmp/.ssh/* ~/.ssh/ && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
+    "install pnpm dependencies": "pnpm install --prefer-offline --frozen-lockfile"
+  },
+  "waitFor": "postCreateCommand",
+  // "updateContentCommand": "pnpm install --prefer-offline",
+  "postStartCommand": {
+    "Set Git config": "git config user.signingkey ~/.ssh/id_ed25519.pub && git config gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers"
+  },
+  "postAttachCommand": {
+    // "Add SSH Key": "./.devcontainer/setup-configs/setup-ssh-key.sh",
+    // "Start SSH support": "eval \"$(ssh-agent -s)\"",
+    // "Astro tests": "pnpm run test",
+    // "Start dev": "pnpm run dev"
+  },
+  "forwardPorts": [3010],
+  // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint",
+        // "aaron-bond.better-comments",
+        // "unifiedjs.vscode-mdx",
+        "idered.npm",
+        // "alefragnani.Bookmarks",
+        // "streetsidesoftware.code-spell-checker",
+        // "kisstkondoros.vscode-codemetrics",
+        // "naumovs.color-highlight",
+        // "adam-bender.commit-message-editor",
+        // "joshbolduc.commitlint",
+        // "yzhang.dictionary-completion",
+        "EditorConfig.EditorConfig",
+        // "usernamehw.errorlens",
+        // "streetsidesoftware.code-spell-checker-german",
+        // "arturock.gitstash",
+        "eamodio.gitlens",
+        // "ecmel.vscode-html-css",
+        // "jasonlhy.hungry-delete",
+        "oderwat.indent-rainbow",
+        "byi8220.indented-block-highlighting",
+        // "Zignd.html-css-class-completion",
+        // "IBM.output-colorizer",
+        "jgclark.vscode-todo-highlight",
+        "Gruntfuggly.todo-tree",
+        "mattpocock.ts-error-translator",
+        "vscode-icons-team.vscode-icons"
+        // "redhat.vscode-yaml",
+        // "stevencl.addDocComments",
+        // "deque-systems.vscode-axe-linter",
+        // "DavidAnson.vscode-markdownlint",
+        // "yzhang.markdown-all-in-one",
+        // "stylelint.vscode-stylelint",
+        // "jock.svg"
+      ]
+    }
+  }
+}

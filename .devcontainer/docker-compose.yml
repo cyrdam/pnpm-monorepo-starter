@@ -1,0 +1,18 @@
+services:
+  webdev:
+    build:
+      context: ../
+      dockerfile: ./.devcontainer/Dockerfile
+    container_name: pnpm-monorepo-starter
+    # restart: always
+    # command: pnpm start
+    command: sleep infinity
+    volumes:
+      # - dc_com_workspace:/workspace
+      # - dc_com_node_modules:/workspace/node_modules
+      - ..:/workspaces:cached
+    ports:
+      - 3010:3010
+# volumes:
+#   dc_com_workspace:
+#   dc_com_node_modules:
