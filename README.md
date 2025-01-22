@@ -6,15 +6,14 @@ This monorepo has a basic structure with multiple react apps as examples.
 
 ## Requirements
 
-- pnpm: 6 or higher (installed globally)
-- Node.js: 14 or higher
+Check out [package.json](./package.json) file for the engines settings.
 
 ## Installation
 
 Expected that `pnpm` is installed globally.
 
 ```shell
-pnpm i
+pnpm install
 ```
 
 ## Running packages
