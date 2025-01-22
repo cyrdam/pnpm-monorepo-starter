@@ -17,6 +17,6 @@
   "license": "ISC",
   "engines": {
     "pnpm": ">=9",
-    "node": ">=18"
+    "node": ">=22"
   }
 }
